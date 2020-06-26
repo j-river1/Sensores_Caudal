@@ -19,3 +19,23 @@ A continuación está la descripción las variables de los sensores:
 
 Las variables que se utilizaron en este proyecto son las alturas, con ellas se calcula el caudal y el volumen XXX
 y  la 
+
+### Calculos para la medición de caudal, volumen y húmedad del suelo
+
+Para la medición de caudal se utiliza la siguiente ecuación:
+
+Q = k * h_real ^ n
+
+Donde k = 0.08693607, n = 1.9322. La altura real es calculada a partir de la resta de las alturas h00 y h01. 
+
+Respecto a la húmedad del suelo se utiliza la siguiente ecuación dependiento de la húmedad del suelo registrada por el sensor.
+
+-Si la húmedad del suelo es mayor o igual a 480 entonces 
+
+ hm_suelo = 0.235 ( hr - 480)
+
+-Si la húmedad del suelo es menor a 480  entonces
+
+hm_suelo = 0.115 (hr - 245)
+
+
